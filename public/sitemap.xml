@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Página Principal -->
+  <url>
+    <loc>https://analisadorcurriculo.com.br/</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://analisadorcurriculo.com.br/hero-resume-score.jpg</image:loc>
+      <image:title>Analisador de Currículo com Score Profissional</image:title>
+      <image:caption>Ilustração de currículo sendo analisado com score 95 e ícones de carreira</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://analisadorcurriculo.com.br/analysis-resume.jpg</image:loc>
+      <image:title>Análise profissional completa de currículo</image:title>
+      <image:caption>Sistema de análise de currículo com lupa e score</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://analisadorcurriculo.com.br/email-tips.jpg</image:loc>
+      <image:title>Dicas de carreira por email</image:title>
+      <image:caption>Envelope com dicas de carreira e crescimento profissional</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://analisadorcurriculo.com.br/career-growth.jpg</image:loc>
+      <image:title>Crescimento profissional com currículo otimizado</image:title>
+      <image:caption>Profissional subindo escada em direção ao sucesso na carreira</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Seções da Página com âncoras -->
+  <url>
+    <loc>https://analisadorcurriculo.com.br/#como-funciona</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://analisadorcurriculo.com.br/#analise</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://analisadorcurriculo.com.br/#beneficios</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://analisadorcurriculo.com.br/#faq</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://analisadorcurriculo.com.br/sitemap.xml
+
+# Otimização de crawl
+Crawl-delay: 1
+
+# Bloquear páginas não essenciais
+Disallow: /api/
+Disallow: /admin/
+Disallow: /privado/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 2
