@@ -410,14 +410,38 @@ function App() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: formData.name,
+          user_name: formData.name,
           email: formData.email,
           category: 'Educação & Carreira'
         })
       })
 
       if (!response.ok) {
-        throw new Error('Erro ao enviar dados')
+        // Try to get detailed error message from API
+        let errorMsg = 'Erro ao enviar dados. Tente novamente.'
+        try {
+          const errorData = await response.json()
+          if (errorData.detail) {
+            if (typeof errorData.detail === 'string') {
+              errorMsg = errorData.detail
+            } else if (Array.isArray(errorData.detail) && errorData.detail[0]?.msg) {
+              errorMsg = errorData.detail[0].msg
+            }
+          }
+        } catch (e) {
+          // ignore parse error
+        }
+
+        // Specific error messages
+        if (response.status === 409) {
+          errorMsg = 'Este email já foi cadastrado. Use outro email ou veja seu score na seção acima.'
+        } else if (response.status === 422) {
+          errorMsg = 'Dados inválidos. Verifique se preencheu todos os campos corretamente.'
+        } else if (response.status === 500) {
+          errorMsg = 'Erro no servidor. Tente novamente em alguns instantes.'
+        }
+
+        throw new Error(errorMsg)
       }
 
       setSubmitSuccess(true)
