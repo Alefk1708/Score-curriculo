@@ -405,14 +405,38 @@ function App() {
     setSubmitError('')
 
     try {
-      // Call API
-      const response = await fetch('https://outer-lira-lumos-desenvolvimento-web-2228c71a.koyeb.app/users', {
+      // Calculate score for result data
+      const scoreData = calculateScore()
+      
+      // Prepare site data and result data
+      const siteData = {
+        area: formData.area,
+        experience: formData.experience,
+        education: formData.education,
+        skills: formData.skills,
+        languages: formData.languages
+      }
+      
+      const resultData = {
+        score_total: scoreData.total,
+        score_maximo: scoreData.max,
+        percentual: Math.round((scoreData.total / scoreData.max) * 100),
+        area: formData.area,
+        experiencia: formData.experience,
+        educacao: formData.education,
+        detalhes_criterios: scoreData.criteria
+      }
+      
+      // Call API with full data
+      const response = await fetch('https://outer-lira-lumos-desenvolvimento-web-2228c71a.koyeb.app/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           user_name: formData.name,
           email: formData.email,
-          category: 'Educação & Carreira'
+          category: 'Educação & Carreira',
+          site_data: siteData,
+          result_data: resultData
         })
       })
 
